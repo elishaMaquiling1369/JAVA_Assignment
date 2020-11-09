@@ -1,0 +1,77 @@
+import java.util.Date;
+
+class Account {
+    // data fields
+    private int id;
+    private double balance;
+    private double annualInterestRate; 
+    private Date dateCreated;
+    
+    //constructors
+    //no argument constructor that sets default values 
+    public Account () {
+    }
+    
+    //constructor that creates initial id and balance
+    public Account (int newId, double newBalance) {
+     id = newId; 
+     balance = newBalance; 
+    }
+    
+    //accessor method for balance 
+    public void setBalance(double newBalance) {
+        balance = newBalance;
+    }  
+    // (balance-withdrawn) + deposit = balance;
+    // method to withdraw money from account
+    public double withdraw (double withdrawnMoney) {
+      return withdrawnMoney;
+    }
+    
+    //method to deposit money to account
+    public double deposit (double depositMoney) {
+       return depositMoney;
+    }
+    
+    //mutator method for balance 
+    //returns new value to balance variable
+    public double getBalance() {
+        balance = (balance - withdraw(2500))+ deposit(3000);
+        return balance; 
+    }
+    
+    //accessor method for ID
+    public int getId() {
+        return id; 
+    }
+    
+    //mutator method for ID
+    public void setId(int newId) {
+        id=newId;
+    }
+   
+    //accessor method for annual interest rate
+    public double getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+    
+    //mutator method for annual interest rate
+    public void setAnnualInterestRate(double newAnnualInterestRate) {
+        annualInterestRate = newAnnualInterestRate;
+    }
+    
+    //method to get current date 
+    public Date getDate() {
+        //must instantiate dateCreated variable 
+        Date dateCreated = new Date();
+        return dateCreated; 
+    }
+    
+    //method to get monthly interest rate
+    public double getMonthlyInterestRate() {
+        return annualInterestRate / 12;
+    }
+    
+    
+    
+}
